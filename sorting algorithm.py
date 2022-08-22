@@ -5,19 +5,6 @@ import random
 import time
 
 
-def selectionSort(data, drawrectangle, delay):
-    
-    for ind in range(len(data)-1):
-        min_index = ind
- 
-        for j in range(ind + 1, len(data)-1):
-            # select the minimum element in every iteration
-            if data[j] < data[min_index]:
-                min_index = j
-                (data[ind], data[min_index]) = (data[min_index], data[ind])
-                drawrectangle(data, ['blue' if x == j or x == j+1 else 'red' for x in range(len(data))] )
-                time.sleep(delay)
-    drawrectangle(data, ['blue' for x in range(len(data))])
 
 def bubble_sort(data, drawrectangle, delay):
     for i in range(len(data)-1):
